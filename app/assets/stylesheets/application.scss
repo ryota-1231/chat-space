@@ -1,0 +1,172 @@
+@import "./reset";
+@import "./variable";
+@import "font-awesome";
+
+*{
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+input {
+  display: inherit;
+  align-items: inherit;
+}
+
+.group-maked {
+ background-color:#38AEF0;
+ color:#fff;
+ height: 20px;
+ text-align: center;
+ display: none;
+}
+
+.sub-contents {
+  width: 300px;
+  background-color:#2f3e51;
+  float: left;
+  height: 100%;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  &__header {
+    height: 100px;
+    background-color:#253141;
+    padding: 0 20px;
+    display: flex;
+    &__box {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  &__main {
+    padding: 20px 20px 0 20px;
+    height: calc(100vh - 100px);
+    &__groups {
+      padding-bottom: 40px;
+      &__name {
+        font-size: 15px;
+        padding-bottom: 5px;
+      }
+      &__text {
+        font-size: 11px;
+      }
+    }
+  }
+}
+
+.contents {
+  height: 100%;
+  width: calc(100vw - 300px);
+  float: right;
+  &__header {
+    height: 100px;
+    padding: 0 40px;
+    border-bottom: 1px solid #eee;
+    &__left {
+      float: left;
+      padding-top: 35px;
+      &__name {
+        font-size: 20px;
+        color: #333;
+        padding-bottom: 15px;
+        }
+      &__member {
+        font-size: 12px;
+        color:#999;
+        }
+    }
+    &__right a {
+      text-decoration: none;
+      float: right;
+      padding: 0 20px;
+      margin-top: 28px;
+      border: 1px solid #38aef0;
+      height: 40px;
+      color: #38aef0;
+      line-height: 40px;
+      display: block;
+    }
+  }
+  &__main {
+    margin: 46px 40px;
+    height: calc(100vh - 282px);
+    &__messages {
+      padding-bottom: 10px;
+      &__box {
+        padding-bottom: 10px;
+        &__name {
+          font-size: 16px;
+          font-weight: bold;
+          color: #434A54;
+          display: inline-block;
+        }
+        &__date {
+          font-size: 12px;
+          color: #999;
+          padding-left: 10px;
+          display: inline-block;
+        }
+      }
+      &__text {
+        font-size: 14px;
+        color: #434A54;
+      }
+    }
+  }
+  &__form {
+    height: 90px;
+    background-color: #ddd;
+    padding: 20px 40px;
+    &__box {
+      height: 50px;
+      width: 100%;
+      display: flex;
+      &__info{
+        position: relative;
+        width: 100%;
+        display: block;
+        margin-right: 15px;
+        &__messages{
+          border-style: none;
+          width: 100%;
+          height: 50px;
+          align-items: center;
+          padding-left: 10px;
+          padding-right: 40px;
+        }
+        &__logo {
+          position: absolute;
+          top: 13px;
+          right: 10px;
+          cursor: pointer;
+          &__input {
+            display: none;
+          }
+        }
+      }
+      &__button {
+      height: 50x;
+      width: 100px;
+      background-color: #38AEF0;
+      color: #fff;
+      padding-left: 30px;
+      padding-right: 30px;
+      margin-left: 15px;
+      float: right;
+      cursor: pointer;
+     }
+     
+    }
+  }
+}
+   
+
+
+
+

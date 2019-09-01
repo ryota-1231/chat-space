@@ -1,0 +1,52 @@
+
+.group-maked グループを作成しました
+
+.sub-contents
+  .sub-contents__header
+    .sub-contents__header__box
+      .sub-contents__header__box__name ryota
+      .sub-contents__header__box__item
+        =link_to "#", class: ".sub-contents__header__box__item__icon" do
+          =fa_icon 'edit'
+        =link_to "#", class: ".sub-contents__header__box__item__icon" do
+          =fa_icon 'cog'
+
+  .sub-contents__main
+    =link_to "#" do
+      .sub-contents__main__groups
+        .sub-contents__main__groups__name rrrrr
+        .sub-contents__main__groups__text Hello World!
+
+.contents
+  .contents__header
+    .contents__header__left
+      .contents__header__left__name rrrrr
+      .contents__header__left__member Member : Ryota
+
+    .contents__header__right
+      = link_to 'Edit', '#' 
+      
+  .contents__main
+    .contents__main__messages
+      .contents__main__messages__box
+        .contents__main__messages__box__name Ryota
+        .contents__main__messages__box__date 2019/08/23(Fri) 15:07:56
+      .contents__main__messages__text Hello World!
+
+  .contents__form
+    %form{class: "contents__form__box",action: "/",method: "post"}
+      .contents__form__box__info
+        %input{placeholder: "type a message", class: "contents__form__box__info__messages", name: "messages", type: "text",size: "40"}
+
+        %label.upload-label{for: "upload-icon",class:"contents__form__box__info__logo"}
+          = fa_icon 'image'
+          %input{class: "contents__form__box__info__logo__input",type: "file", name: "image", id: "upload-icon" }
+
+
+      %input{class: "contents__form__box__button",type: "submit", value: "send"}
+     
+
+
+
+
+

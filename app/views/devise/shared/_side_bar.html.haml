@@ -1,8 +1,7 @@
 .side-bar
   .header
     .header__box
-      %h3.header__name
-        = current_user.name
+      .header__name = current_user.name
       %ul.header__lists
         %li.list
           = link_to new_group_path do
@@ -19,3 +18,4 @@
             = group.name
           .group__message
             メッセージはまだありません。
+            .side-bar

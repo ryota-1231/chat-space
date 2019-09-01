@@ -1,5 +1,5 @@
 
--# side_ber
+
 = render '/devise/shared/side_bar'
 
 .contents
@@ -11,26 +11,13 @@
     .contents__header__right
       = link_to 'Edit', '#' 
       
-  .contents__main
-    .contents__main__messages
-      .contents__main__messages__box
-        .contents__main__messages__box__name Ryota
-        .contents__main__messages__box__date 2019/08/23(Fri) 15:07:56
-      .contents__main__messages__text Hello World!
+  .messages
+    = render @messages
+
+
 
   .contents__form
-    %form{class: "contents__form__box",action: "/",method: "post"}
-      .contents__form__box__info
-        %input{placeholder: "type a message", class: "contents__form__box__info__messages", name: "messages", type: "text",size: "40"}
-
-        %label.upload-label{for: "upload-icon",class:"contents__form__box__info__logo"}
-          = fa_icon 'image'
-          %input{class: "contents__form__box__info__logo__input",type: "file", name: "image", id: "upload-icon" }
-
-
-      %input{class: "contents__form__box__button",type: "submit", value: "send"}
-     
-     .form
+    .form
       = form_for [@group, @message] do |f|
         = f.text_field :content, class: 'form__message', placeholder: 'type a message'
         .form__mask

@@ -9,7 +9,7 @@
       .contents__header__left__member Member : Ryota
 
     .contents__header__right
-      = link_to 'Edit', '#' 
+      = link_to 'Edit', edit_group_path(params[:group_id]), method: :get
       
   .messages
     = render @messages

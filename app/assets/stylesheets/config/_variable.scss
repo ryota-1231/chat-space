@@ -102,34 +102,37 @@ input {
       display: block;
     }
   }
-  &__main {
-    margin: 46px 40px;
+
+  .messages {
+    padding: 46px 40px;
     height: calc(100vh - 192px);
     position: relative;
-    .messages {
-      padding-bottom: 10px;
-      .message {
-        padding-bottom: 10px;
-        .upper-message
-          &__user-name {
+    background-color: #fafafa;
+    .message {
+      padding-bottom: 40px;
+      .upper-message {
+        margin-bottom: 10px;
+        display: flex;
+        .upper-message__user-name {
           font-size: 16px;
           font-weight: bold;
           color: #434A54;
           display: inline-block;
         }
-          &__date {
+        .upper-message__date {
           font-size: 12px;
           color: #999;
           padding-left: 10px;
           display: inline-block;
         }
       }
+    }
         .lower-message {
           font-size: 14px;
           color: #434A54;
       }
     }
-  }
+  
   &__form {
     height: 90px;
     background-color: #ddd;

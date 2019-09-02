@@ -139,6 +139,7 @@ input {
     padding: 20px 40px;
     position: absolute;
     bottom: 0;
+    width: calc(100vw - 300px);
     &__box {
       height: 50px;
       width: 100%;

@@ -28,6 +28,7 @@ input {
   height: 100%;
   color: #fff;
   position: fixed;
+  z-index: 5;
   .header {
     height: 100px;
     background-color:#253141;
@@ -80,7 +81,7 @@ input {
     border-bottom: 1px solid #eee;
     width: calc(100vw - 300px);
     position: fixed;
-    z-index: 10;
+    z-index: 5;
     background-color: #fff;
     &__left {
       float: left;
@@ -111,7 +112,6 @@ input {
   .messages {
     margin: 100px 0 90px;
     padding: 46px 40px;
-    height: calc(100vh - 192px);
     background-color: #fafafa;
     .message {
       padding-bottom: 40px;

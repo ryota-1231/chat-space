@@ -27,6 +27,8 @@ input {
   float: left;
   height: 100%;
   color: #fff;
+  position: fixed;
+  z-index: 5;
   .header {
     height: 100px;
     background-color:#253141;
@@ -77,6 +79,10 @@ input {
     height: 100px;
     padding: 0 40px;
     border-bottom: 1px solid #eee;
+    width: calc(100vw - 300px);
+    position: fixed;
+    z-index: 5;
+    background-color: #fff;
     &__left {
       float: left;
       padding-top: 35px;
@@ -104,9 +110,8 @@ input {
   }
 
   .messages {
+    margin: 100px 0 90px;
     padding: 46px 40px;
-    height: calc(100vh - 192px);
-    position: relative;
     background-color: #fafafa;
     .message {
       padding-bottom: 40px;
@@ -133,23 +138,27 @@ input {
       }
     }
   
-  &__form {
+  .contents__form {
     height: 90px;
     background-color: #ddd;
     padding: 20px 40px;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: calc(100vw - 300px);
-    &__box {
+
+    .form {
       height: 50px;
       width: 100%;
       display: flex;
-      &__info{
-        position: relative;
+      .new_message{
+        display: flex;
         width: 100%;
-        display: block;
-        margin-right: 15px;
-        &__messages{
+        position: relative;
+        .form__message{
+          position: relative;
+          width: 100%;
+          display: block;
+          margin-right: 15px;
           border-style: none;
           width: 100%;
           height: 50px;
@@ -157,28 +166,33 @@ input {
           padding-left: 10px;
           padding-right: 40px;
         }
-        &__logo {
-          position: absolute;
-          top: 13px;
-          right: 10px;
-          cursor: pointer;
-          &__input {
-            display: none;
+        .form__mask {
+          &__image{
+            font-size: 1.3rem;
+            position: absolute;
+            top: 10px;
+            right: 140px;
+            cursor: pointer;
+            .hidden {
+              display: none;
+            }
+            
           }
-        }
+          }
+        
+        .form__submit {
+        height: 50x;
+        width: 100px;
+        background-color: #38AEF0;
+        color: #fff;
+        padding-left: 30px;
+        padding-right: 30px;
+        margin-left: 15px;
+        float: right;
+       }
       }
-      &__button {
-      height: 50x;
-      width: 100px;
-      background-color: #38AEF0;
-      color: #fff;
-      padding-left: 30px;
-      padding-right: 30px;
-      margin-left: 15px;
-      float: right;
      }
     }
-  }
 }
    
 

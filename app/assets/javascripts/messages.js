@@ -2,18 +2,10 @@ $(function(){
 
   function buildPost(message){
    
-   if (message.image==null){
-     var image =""
-   } else {
-    var image = `<img class="lower-message__image" src="${message.image}" width="193" height="130">`
-   };
-   
-   if (message.content==null){
-    var content =""
-  } else {
-    var content =`<p class="lower-message__content">${message.content}</p>`
-  };
+     var image = ((message.image==null)? ' ':`<img class="lower-message__image" src="${message.image}" width="193" height="130">`);
 
+     var content = (message.content==null)? ' ':`<p class="lower-message__content">${message.content}</p>`
+   
     var html =`<div class="message">
                 <div class="upper-message">
                  <div class="upper-message__user-name">
@@ -51,7 +43,7 @@ $(function(){
     .done(function(message){
       var html = buildPost(message);
       $('.messages').append(html);
-      $('#message_content').val('');
+      $('#message_content').get(0).reset();
       
       $('body,html').animate({ scrollTop: $('.messages')[0].scrollHeight});
       return false;

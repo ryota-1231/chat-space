@@ -40,19 +40,19 @@ $(function(){
       contentType: false
       })
 
-    .done(function(message){
-      var html = buildPost(message);
-      $('.messages').append(html);
-      $('#message_content').get(0).reset();
-      
-      $('body,html').animate({ scrollTop: $('.messages')[0].scrollHeight});
-      return false;
-      })
+      .done(function(message){
+        var html = buildPost(message);
+        $('.messages').append(html);
+        $('#message_content').val();
+        
+        
+        $('body,html').animate({ scrollTop: $('.messages')[0].scrollHeight});
+        return false;
+        })
 
       
     .fail(function(){
      alert('メッセージを入力してください。')
     })
-
   })
 });

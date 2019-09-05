@@ -5,16 +5,19 @@
 .contents
   .contents__header
     .contents__header__left
-      .contents__header__left__name rrrrr
-      .contents__header__left__member Member : Ryota
+      .contents__header__left__name
+        = @group.name
+      .contents__header__left__member 
+        = 'Menmber: '
+        - @group.users.each do |user|
+          = user.name + ' '
+
 
     .contents__header__right
       = link_to 'Edit', edit_group_path(params[:group_id]), method: :get
       
   .messages
     = render @messages
-
-
 
   .contents__form
     .form

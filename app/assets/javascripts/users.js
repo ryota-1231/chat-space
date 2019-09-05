@@ -26,7 +26,7 @@ $(function() {
 
     $.ajax({
       type: 'GET',
-      url: '/groups/new',
+      url: '/users',
       data: { keyword: input },
       dataType: 'json'
     })

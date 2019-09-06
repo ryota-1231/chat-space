@@ -49,7 +49,7 @@ $(function(){
         var html = buildHTML(message);
         $('.messages').append(html);
         $('#new_message').get(0).reset();
-        $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight});
+        $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight},'slow');
        
         })
 
@@ -72,7 +72,7 @@ $(function(){
   
     .done(function(messages) {
       //追加するHTMLの入れ物を作る
-      console.log("hoge");
+    
       var insertHTML='';
           messages.forEach(function(message){
             insertHTML = buildHTML(message);
@@ -83,7 +83,7 @@ $(function(){
         })
 
     .fail(function() {
-      console.log('error');
+     alert('error')
     });
   };
  };

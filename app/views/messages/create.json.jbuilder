@@ -1,4 +1,9 @@
-json.name @message.user.name
-json.created_at @message.created_at.strftime("%Y/%m/%d (%a) %H:%M")
+date = Date.today
+datetime = DateTime.now
+
 json.content @message.content
 json.image @message.image.url
+json.date @message.created_at.to_s(:published_on)
+json.user_name @message.user.name
+#idもデータとして渡す
+json.id @message.id

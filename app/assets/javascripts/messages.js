@@ -26,8 +26,6 @@ $(function(){
                 </div>`
     return html;
     }
-    
-
 
   $('#new_message').on('submit',function(e){
     e.preventDefault();
@@ -52,19 +50,22 @@ $(function(){
         var a = document.documentElement;
         var y = a.scrollHeight - a.clientHeight;
         window.scroll(0, y);
+        console.log("hoge");
         })
 
-      
     .fail(function(){
      alert('メッセージを入力してください。')
     })
   })
 
-  var reloadMessages = function() {
+     var reloadMessages = function() {
     if (window.location.href.match(/\/groups\/\d+\/messages/)){
       var url = 'api/messages#index {:format=>"json"}'
       var last_message_id = $('.message:last').data('id');
-      $.ajax({
+       if (jqxhr) {
+          return;
+      }
+      jqxhr =  $.ajax({
         url:  url,
         type: 'GET',
         data: {id: last_message_id},
@@ -81,6 +82,7 @@ $(function(){
             var a = document.documentElement;
             var y = a.scrollHeight - a.clientHeight;
             window.scroll(0, y);
+            console.log("foge");
           });
         })
 
@@ -89,6 +91,6 @@ $(function(){
     });
   };
  };
- setInterval(reloadMessages, 5000);
+ var jqxhr;setInterval(reloadMessages, 5000);
 });
 

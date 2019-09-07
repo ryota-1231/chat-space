@@ -49,8 +49,9 @@ $(function(){
         var html = buildHTML(message);
         $('.messages').append(html);
         $('#new_message').get(0).reset();
-        $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight},'slow');
-       
+        var a = document.documentElement;
+        var y = a.scrollHeight - a.clientHeight;
+        window.scroll(0, y);
         })
 
       
@@ -77,8 +78,9 @@ $(function(){
           messages.forEach(function(message){
             insertHTML = buildHTML(message);
             $('.messages').append(insertHTML);
-            $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight});
-            
+            var a = document.documentElement;
+            var y = a.scrollHeight - a.clientHeight;
+            window.scroll(0, y);
           });
         })
 

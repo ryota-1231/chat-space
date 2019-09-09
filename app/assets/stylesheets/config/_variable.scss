@@ -27,7 +27,7 @@ input {
   float: left;
   height: 100%;
   color: #fff;
-  position: fixed;
+  
   z-index: 5;
   .header {
     height: 100px;
@@ -57,6 +57,7 @@ input {
     padding: 20px 20px 0 20px;
     height: calc(100vh - 100px);
     width: 300px;
+    overflow: scroll;
     .group {
       padding-bottom: 40px;
       &__name {
@@ -80,7 +81,6 @@ input {
     padding: 0 40px;
     border-bottom: 1px solid #eee;
     width: calc(100vw - 300px);
-    position: fixed;
     z-index: 5;
     background-color: #fff;
     &__left {
@@ -110,10 +110,11 @@ input {
   }
 
   .messages {
-    margin: 100px 0 90px;
+    
     padding: 46px 40px;
     background-color: #fafafa;
-    // overflow: auto; 
+    overflow: scroll;
+    height: calc(100vh - 190px);
     .message {
       padding-bottom: 40px;
       // overflow: auto; 

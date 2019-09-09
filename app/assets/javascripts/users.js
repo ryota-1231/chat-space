@@ -73,11 +73,9 @@ $('.chat-group-form__field--right').on("click", ".user-search-add", function (e)
   $(`.user-search-add[data-user-id=${id}]`).parent().remove();
   });
 
-  $('.chat-group-form__field--right').on("click", ".user-search-remove", function (e) {
-    var document = $(".user-search-remove").siblings('input');
-    var id = $(document).attr("value");
-    $(`input[value=${id}]`).parent().remove();
+  $('.chat-group-form__field--right').on("click", '.chat-group-user__btn--remove', function (e) {
+    var target = $(e.target);
+    $(target).parent().remove();
+
     })
 });
-
-

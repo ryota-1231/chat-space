@@ -16,7 +16,7 @@
     .chat-group-form__field--right
       %input.chat__group_name.chat-group-form__input#user-search-field{ placeholder:'追加したいユーザー名を入力してください' }
       #user-search-result
-      / この部分はインクリメンタルサーチ（ユーザー追加の非同期化のときに使用します
+     
   .chat-group-form__field.clearfix
     .chat-group-form__field--left
       %label.chat-group-form__label{for:"chat_group_チャットメンバー"} チャットメンバー
@@ -27,7 +27,7 @@
           %div.chat-group-user
             %input{name:'group[user_ids][]',type:'hidden',value:user.id}
             %p.chat-group-user__name=user.name
-            %div.user-search-remove.chat-group-user__btn.chat-group-user__btn--remove.js-remove-btn 削除
+          
          
     
   .chat-group-form__field.clearfix

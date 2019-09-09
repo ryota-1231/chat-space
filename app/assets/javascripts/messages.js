@@ -47,25 +47,21 @@ $(function(){
         var html = buildHTML(message);
         $('.messages').append(html);
         $('#new_message').get(0).reset();
-        var a = document.documentElement;
-        var y = a.scrollHeight - a.clientHeight;
-        window.scroll(0, y);
-        console.log("hoge");
+
+        $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'slow');
         })
 
-    .fail(function(){
-     alert('メッセージを入力してください。')
-    })
+      .fail(function(){
+      alert('メッセージを入力してください。')
+      })
   })
 
      var reloadMessages = function() {
     if (window.location.href.match(/\/groups\/\d+\/messages/)){
       var url = 'api/messages#index {:format=>"json"}'
       var last_message_id = $('.message:last').data('id');
-       if (jqxhr) {
-          return;
-      }
-      jqxhr =  $.ajax({
+     
+      $.ajax({
         url:  url,
         type: 'GET',
         data: {id: last_message_id},
@@ -73,16 +69,14 @@ $(function(){
       })
   
     .done(function(messages) {
-      //追加するHTMLの入れ物を作る
+      console.log('hoge');
     
       var insertHTML='';
           messages.forEach(function(message){
             insertHTML = buildHTML(message);
             $('.messages').append(insertHTML);
-            var a = document.documentElement;
-            var y = a.scrollHeight - a.clientHeight;
-            window.scroll(0, y);
-            console.log("foge");
+            $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'slow');      
+            
           });
         })
 
@@ -91,6 +85,6 @@ $(function(){
     });
   };
  };
- var jqxhr;setInterval(reloadMessages, 5000);
+ setInterval(reloadMessages, 5000);
 });
 

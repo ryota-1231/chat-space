@@ -23,6 +23,11 @@ $(function() {
 
   $("#user-search-field").on("keyup", function() {
     var input = $("#user-search-field").val();
+    $("#user-search-result").empty();
+
+    if (input == "") {
+      return
+    }
 
     $.ajax({
       type: 'GET',

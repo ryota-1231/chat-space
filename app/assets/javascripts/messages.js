@@ -69,20 +69,17 @@ $(function(){
       })
   
     .done(function(messages) {
-      console.log('hoge');
-    
-      var insertHTML='';
           messages.forEach(function(message){
-            insertHTML = buildHTML(message);
+            var insertHTML = buildHTML(message);
             $('.messages').append(insertHTML);
             $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'slow');      
-            
           });
         })
 
     .fail(function() {
      alert('error')
     });
+    
   };
  };
  setInterval(reloadMessages, 5000);

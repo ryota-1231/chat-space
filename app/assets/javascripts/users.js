@@ -24,6 +24,7 @@ $(function() {
   $("#user-search-field").on("keyup", function() {
     var input = $("#user-search-field").val();
     $("#user-search-result").empty();
+    console.log(input)
 
     if (input == "") {
       return
@@ -38,6 +39,7 @@ $(function() {
 
     .done(function(users) {
       $("#user-search-result").empty();
+      console.log(users)
 
       if (users.length !== 0)  {
          users.forEach(function(user){

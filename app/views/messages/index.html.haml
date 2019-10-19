@@ -1,5 +1,3 @@
-
-
 = render '/devise/shared/side_bar'
 
 .contents
@@ -11,14 +9,11 @@
         = 'Menmber: '
         - @group.users.each do |user|
           = user.name + ' '
-
-
     .contents__header__right
       = link_to 'Edit', edit_group_path(params[:group_id]), method: :get
       
   .messages
     = render @messages
-
   .contents__form
     .form
       = form_for [@group, @message] do |f|

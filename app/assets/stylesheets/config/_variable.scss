@@ -110,14 +110,13 @@ input {
   }
 
   .messages {
-    
     padding: 46px 40px;
     background-color: #fafafa;
     overflow: scroll;
     height: calc(100vh - 190px);
+    width: calc(100vw - 300px);
     .message {
       padding-bottom: 40px;
-      // overflow: auto; 
       .upper-message {
         margin-bottom: 10px;
         display: flex;

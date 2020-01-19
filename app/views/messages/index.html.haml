@@ -1,5 +1,4 @@
 = render '/devise/shared/side_bar'
-
 .contents
   .contents__header
     .contents__header__left
@@ -11,7 +10,6 @@
           = user.name + ' '
     .contents__header__right
       = link_to 'Edit', edit_group_path(params[:group_id]), method: :get
-      
   .messages
     = render @messages
   .contents__form
@@ -23,8 +21,3 @@
             = fa_icon 'picture-o', class: 'icon'
             = f.file_field :image, class: 'hidden'
         = f.submit 'Send', class: 'form__submit'
-
-
-
-
-
